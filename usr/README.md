@@ -1,6 +1,6 @@
-# couldai_user_app
+# Panic Protect
 
-A new Flutter project.
+A personal safety and emergency alert application.
 
 ## Getting Started
 
