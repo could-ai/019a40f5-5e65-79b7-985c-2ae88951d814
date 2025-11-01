@@ -26,11 +26,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Hide the AppBar for the HomeScreenBody, but show it for others
+    final bool showAppBar = _selectedIndex != 0;
+
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Panic Protect"),
-        centerTitle: true,
-      ),
+      appBar: showAppBar
+          ? null // The screens themselves now have AppBars
+          : AppBar(
+              title: const Text("Panic Protect"),
+              centerTitle: true,
+            ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),

@@ -5,9 +5,27 @@ class MapScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Map View"),
+        automaticallyImplyLeading: false,
+      ),
       body: Center(
-        child: Text("Map Screen"),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.map,
+              size: 100,
+              color: Colors.grey[400],
+            ),
+            const SizedBox(height: 20),
+            Text(
+              "Map integration coming soon!",
+              style: TextStyle(fontSize: 18, color: Colors.grey[600]),
+            ),
+          ],
+        ),
       ),
     );
   }
